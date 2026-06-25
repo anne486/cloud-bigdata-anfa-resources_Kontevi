@@ -35,7 +35,7 @@ Au cours de cette séance, j'ai conteneurisé une application PySpark d'analyse 
 ![Notebook Jupyter](captures/jupyter-pandas.png)
 
 ### Bonus multi-stage (optionnel)
-*Non réalisé.*
+
 
 ### Réponses aux exercices d'application
 
