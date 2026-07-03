@@ -1,8 +1,8 @@
 # Rendu : Séance 6
 
 **Nom et prénom :** Denis AKPAGNONITE
-**Identifiant GitHub :** <votre-username>
-**Date de soumission :** <JJ/MM/AAAA>
+**Identifiant GitHub :** anne486
+**Date de soumission :** <03/07/2026>
 
 ## Résumé de la séance
 
