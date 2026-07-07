@@ -6,8 +6,7 @@
 
 ## Résumé de la séance
 
-<2-4 lignes : logique métier séparée et testée, pipeline CI/CD GitHub Actions
-écrit, démonstration d'un test bloquant le déploiement.>
+Au cours de cette séance, nous avons séparé la logique métier du DAG Airflow afin de la rendre indépendante et facilement testable. Nous avons ensuite écrit des tests unitaires avec pytest ainsi qu'un pipeline GitHub Actions exécutant automatiquement le lint et les tests à chaque push. Enfin, nous avons vérifié que le pipeline bloque le déploiement lorsqu'un test échoue et qu'il autorise le déploiement (simulation) lorsque tous les tests sont validés.
 
 ## Étapes principales
 
@@ -26,8 +25,7 @@
 
 ## Réflexion personnelle
 
-<3-5 lignes : en quoi ce pipeline aurait-il empêché l'incident de Mawuli
-(situation-problème du CM) ? Qu'est-ce que `needs:` change concrètement ?>
+Ce pipeline aurait permis d'éviter l'incident de Mawuli en détectant automatiquement les erreurs grâce aux tests unitaires avant toute mise en production. Ainsi, un code défectueux aurait été bloqué dès la phase d'intégration continue. Le mot-clé needs: dans GitHub Actions permet d'imposer un ordre d'exécution entre les jobs : le déploiement ne démarre que si les étapes précédentes, comme le lint et les tests, se terminent avec succès. Cela garantit qu'un code non validé ne peut pas être déployé.
 
 ## Difficultés rencontrées
 
