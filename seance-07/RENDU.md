@@ -1,13 +1,12 @@
 # Rendu — Séance 7
 
-**Nom et prénom :** <Votre nom complet>
-**Identifiant GitHub :** <votre-username>
-**Date de soumission :** <JJ/MM/AAAA>
+**Nom et prénom :** KONTEVI Akossiwa Anne
+**Identifiant GitHub :** anne486
+**Date de soumission :** 07/07/2026
 
 ## Résumé de la séance
 
-<2-4 lignes : cluster Kafka 3 brokers déployé, flotte de bus simulée en flux continu,
-tolérance aux pannes observée, Spark Structured Streaming consommant et agrégeant le flux vers MinIO.>
+Au cours de cette séance, nous avons déployé un cluster Kafka composé de 3 brokers en mode KRaft, accompagné de Kafka UI pour superviser son fonctionnement. Nous avons ensuite simulé une flotte de 100 bus envoyant leurs positions GPS en continu, puis consommé ces données avec Spark Structured Streaming afin de calculer des agrégats en temps réel avant de les stocker dans MinIO. Enfin, nous avons vérifié la tolérance aux pannes du cluster en arrêtant volontairement un broker.
 
 ## Étapes principales
 
@@ -21,13 +20,13 @@ tolérance aux pannes observée, Spark Structured Streaming consommant et agrég
 ## Captures d'écran
 
 ### 3 brokers actifs dans Kafka UI
-![Brokers actifs](captures/kafka-ui-brokers.png)
+![Brokers actifs](captures/kalka-ui-brokers.png)
 
 ### Débit de messages en augmentation
-![Débit messages](captures/kafka-ui-debit.png)
+![Débit messages](captures/kalka-ui-debit.png)
 
 ### Cluster avec 2 brokers sur 3 (après arrêt volontaire)
-![2 brokers sur 3](captures/kafka-ui-2-brokers.png)
+![2 brokers sur 3](captures/kalka-ui-2-brokers.png)
 
 ### Micro-batchs affichés en console par Spark
 ![Console Spark Streaming](captures/spark-streaming-console.png)
@@ -37,8 +36,9 @@ tolérance aux pannes observée, Spark Structured Streaming consommant et agrég
 
 ## Réflexion personnelle
 
-<3-5 lignes : dans quel cas utiliseriez-vous Kafka + Spark Streaming plutôt que le pipeline batch
-Airflow + Spark vu en séance 5-6 ? Qu'est-ce que la réplication à 3 brokers vous a concrètement montré ?>
+J'utiliserais Kafka associé à Spark Structured Streaming lorsqu'il est nécessaire de traiter des données en temps réel, par exemple pour le suivi GPS de véhicules, la détection de fraude ou la supervision d'équipements connectés. À l'inverse, un pipeline Airflow + Spark est davantage adapté aux traitements planifiés sur des données déjà stockées, comme les rapports quotidiens ou les analyses périodiques.
+
+La réplication sur 3 brokers m'a montré qu'un cluster Kafka reste opérationnel même lorsqu'un broker tombe en panne. Les producteurs et consommateurs continuent à échanger des messages grâce aux répliques présentes sur les autres brokers, ce qui améliore fortement la disponibilité et la fiabilité du système.
 
 ## Réponses aux exercices d'application
 
@@ -46,4 +46,4 @@ Airflow + Spark vu en séance 5-6 ? Qu'est-ce que la réplication à 3 brokers v
 
 ## Difficultés rencontrées
 
-<Aucune | Décrivez brièvement.>
+aucune
