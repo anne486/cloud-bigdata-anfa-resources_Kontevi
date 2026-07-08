@@ -1,13 +1,12 @@
 # Rendu — Séance 9
 
-**Nom et prénom :** <Votre nom complet>
-**Identifiant GitHub :** <votre-username>
-**Date de soumission :** <JJ/MM/AAAA>
+**Nom et prénom :** KONTEVI Akossiwa anne 
+**Identifiant GitHub :** anne486
+**Date de soumission :** 08/07/2026
 
 ## Résumé de la séance
 
-<2-4 lignes : stack Prometheus/Grafana déployée, exportateur de fraîcheur Anfa
-instrumenté, dashboard construit, alerte configurée et déclenchée sur panne simulée.>
+Au cours de cette séance, j'ai déployé une stack de monitoring avec Prometheus, Grafana, Node Exporter et cAdvisor afin de superviser l'application Anfa. J'ai appris à visualiser les métriques, créer une métrique métier sur la fraîcheur des données et configurer une alerte capable de détecter une panne.
 
 ## Étapes principales
 
@@ -31,9 +30,7 @@ instrumenté, dashboard construit, alerte configurée et déclenchée sur panne 
 
 ## Réflexion personnelle
 
-<3-5 lignes : en quoi cette séance répond-elle directement à la situation-problème
-d'Awa dans le CM ? Qu'est-ce que la métrique de fraîcheur vous a permis de voir que
-les autres métriques (CPU, RAM, statut des conteneurs) ne montraient pas ?>
+Cette séance m'a montré que le monitoring est indispensable pour détecter rapidement les anomalies avant qu'elles n'impactent les utilisateurs. Grâce aux métriques et aux alertes Grafana, il devient possible de surveiller en temps réel l'état de l'application et d'intervenir dès qu'un problème est détecté.
 
 ## Difficultés rencontrées
 
